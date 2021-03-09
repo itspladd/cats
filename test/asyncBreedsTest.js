@@ -10,4 +10,10 @@ describe('#breedDetailsFromFile', () => {
       done();
     });
   });
+  it(`should return undefined for a breed that is not found`, (done) => {
+    breedDetailsFromFile("longcat", (data) => {
+      assert.equal(undefined, data);
+      done();
+    });
+  });
 });
